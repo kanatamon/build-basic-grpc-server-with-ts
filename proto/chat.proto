@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package chat;
+
+service Chat {
+  rpc GetMessages(Empty) returns (MessageList) {};
+}
+
+message Empty {}
+
+message Message {
+  int32 id = 1;
+  string username = 2;
+  string text = 3;
+}
+
+message MessageList {
+  repeated Message messages = 1;
+}

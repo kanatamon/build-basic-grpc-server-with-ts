@@ -1,0 +1,17 @@
+{
+  "name": "grpc-ts-noob",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsx watch ./src/index.ts"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.6.12",
+    "@grpc/proto-loader": "^0.7.2"
+  },
+  "devDependencies": {
+    "tsx": "^3.9.0",
+    "typescript": "^4.8.2"
+  }
+}
