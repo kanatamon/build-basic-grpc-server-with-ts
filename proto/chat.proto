@@ -4,6 +4,7 @@ package chat;
 
 service Chat {
   rpc GetMessages(Empty) returns (MessageList) {};
+  rpc AddMessages(stream Message) returns (Empty) {};
 }
 
 message Empty {}
