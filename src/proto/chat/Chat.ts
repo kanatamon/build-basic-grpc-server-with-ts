@@ -89,6 +89,21 @@ export interface ChatClient extends grpc.Client {
     argument: _chat_Empty,
     callback: grpc.requestCallback<_chat_MessageList__Output>
   ): grpc.ClientUnaryCall;
+
+  LiveMessages(
+    metadata: grpc.Metadata,
+    options?: grpc.CallOptions
+  ): grpc.ClientDuplexStream<_chat_Message, _chat_Message__Output>;
+  LiveMessages(
+    options?: grpc.CallOptions
+  ): grpc.ClientDuplexStream<_chat_Message, _chat_Message__Output>;
+  liveMessages(
+    metadata: grpc.Metadata,
+    options?: grpc.CallOptions
+  ): grpc.ClientDuplexStream<_chat_Message, _chat_Message__Output>;
+  liveMessages(
+    options?: grpc.CallOptions
+  ): grpc.ClientDuplexStream<_chat_Message, _chat_Message__Output>;
 }
 
 export interface ChatHandlers extends grpc.UntypedServiceImplementation {
@@ -98,6 +113,11 @@ export interface ChatHandlers extends grpc.UntypedServiceImplementation {
   >;
 
   GetMessages: grpc.handleUnaryCall<_chat_Empty__Output, _chat_MessageList>;
+
+  LiveMessages: grpc.handleBidiStreamingCall<
+    _chat_Message__Output,
+    _chat_Message
+  >;
 }
 
 export interface ChatDefinition extends grpc.ServiceDefinition {
@@ -112,5 +132,11 @@ export interface ChatDefinition extends grpc.ServiceDefinition {
     _chat_MessageList,
     _chat_Empty__Output,
     _chat_MessageList__Output
+  >;
+  LiveMessages: MethodDefinition<
+    _chat_Message,
+    _chat_Message,
+    _chat_Message__Output,
+    _chat_Message__Output
   >;
 }
