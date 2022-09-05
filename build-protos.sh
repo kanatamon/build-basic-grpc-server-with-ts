@@ -2,6 +2,7 @@
 
 OUTDIR=./src/proto
 
+rm -rf ${OUTDIR}
 mkdir -p ${OUTDIR}
 
 # Typescript code generation
