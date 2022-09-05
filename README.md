@@ -29,3 +29,8 @@ Because, the files generated would be hidden and the less code we have to mainta
 > To be honest, I did NOT know the Prisma types generation work 😅 under the hood.
 > There might be some significant consideration along with how the tool work, and
 > that might affect to other scenario.
+
+## References
+
+- [Evaluating Performance of REST vs. gRPC](https://medium.com/@EmperorRXF/evaluating-performance-of-rest-vs-grpc-1b8bdf0b22da#:~:text=gRPC%20is%20roughly%207%20times,of%20HTTP%2F2%20by%20gRPC.)
+  , An opinion experiment that shown the gRPC is roughly 7-10 times faster than REST.
